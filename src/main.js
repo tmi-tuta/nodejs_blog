@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const path = require('path');
 const app = express();
 const port = 3000;
+const routes = require('./routes');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -26,18 +27,7 @@ app.set('view engine', '.hbs');
 // Set pat url to view
 app.set('views', path.join(__dirname, 'resources/views'));
 
-app.get('/', (req, res) => {
-  res.render('home');
-});
-
-app.get('/register', (req, res) => {
-  res.render('auth/register');
-});
-
-app.post('/register', (req, res) => {
-  console.log(req.body);
-  return res.render('auth/register');
-});
+routes(app);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
