@@ -2,9 +2,10 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "nodemon --inspect main.js",
+    "start": "nodemon --inspect src/main.js",
+    "watch": "node-sass --watch src/resources/scss/app.scss -o src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +23,10 @@
   },
   "homepage": "https://github.com/tmi-tuta/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "hbs": "^4.2.0",
+    "node-sass": "^9.0.0"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

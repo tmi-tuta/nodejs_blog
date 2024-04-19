@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: $red-color;
+}
+
+.div-container {
+    min-height: 900px !important;
+}
+
+.footer {
+    min-height: 100px !important;
+}
